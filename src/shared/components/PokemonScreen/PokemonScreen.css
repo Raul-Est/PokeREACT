@@ -1,0 +1,208 @@
+.scan-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px;
+  min-height: 420px;
+}
+
+/* Tornillos */
+
+.panel-screws {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+.panel-screws span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(#ffb1b1, #8e1717);
+}
+
+/* Pantalla */
+
+.scan-screen {
+  overflow: hidden;
+  border: 3px solid white;
+  border-radius: 10px;
+  background: #e8e8e8;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  color: #111;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.scan-header,
+.scan-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  min-height: 30px;
+}
+
+.scan-header span:last-child {
+  font-size: 10px;
+}
+
+.scan-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 10px;
+  background-color: #b5dc8c;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.scan-view img {
+  width: 100%;
+  max-width: 290px;
+  height: 260px;
+  object-fit: contain;
+}
+
+.scan-message {
+  color: #355a2c;
+  font-size: 12px;
+}
+
+/* Barras de sonido */
+
+.cry-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.cry-bars i {
+  width: 4px;
+  height: 10px;
+  background: #2f7a3a;
+}
+
+.cry-bars i:nth-child(even) {
+  height: 15px;
+}
+
+/* Botones anterior y siguiente */
+
+.pokemon-navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.pokemon-navigation button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pokemon-navigation button:hover {
+  background: #333;
+}
+
+.pokemon-navigation button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Controles */
+
+.scan-controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cry-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #1e8ad0;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cry-button:hover {
+  background: #4cc3ff;
+}
+
+/* Cruceta */
+
+.direction-pad {
+  position: relative;
+  width: 75px;
+  height: 75px;
+}
+
+.direction-pad span {
+  position: absolute;
+  background: #111;
+}
+
+.direction-pad__up,
+.direction-pad__down {
+  left: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.direction-pad__up {
+  top: 0;
+}
+
+.direction-pad__down {
+  bottom: 0;
+}
+
+.direction-pad__left,
+.direction-pad__right {
+  top: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.direction-pad__left {
+  left: 0;
+}
+
+.direction-pad__right {
+  right: 0;
+}
+
+.direction-pad__center {
+  top: 25px;
+  left: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+/* Responsive */
+
+@media (max-width: 760px) {
+  .scan-panel {
+    min-height: 0;
+  }
+
+  .scan-view {
+    min-height: 260px;
+  }
+}
